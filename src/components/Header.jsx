@@ -26,7 +26,7 @@ const Header = () => {
             <Link to="/">
               {" "}
               <button className="buttoncharacter" type="submit">
-                Character
+                Characters
               </button>
             </Link>
           </div>

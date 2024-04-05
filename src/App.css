@@ -162,14 +162,12 @@ body {
 }
 
 .home-img {
-  background-image: url("src/assets/img/bdmarvel.jpg");
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/566/514/449/marvel-cinematic-universe-marvel-comics-iron-man-spider-man-wallpaper-preview.jpg");
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
   border: #555 solid 1px;
-
-  height: 455px;
+  height: 450px;
   margin-top: 30px;
   width: 100%;
 }
