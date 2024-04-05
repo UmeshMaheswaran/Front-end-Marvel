@@ -21,20 +21,25 @@ const Comics = () => {
   return isLoading ? (
     <></>
   ) : (
-    <main>
-      {comicsData.results.map((comics) => {
-        return (
-          <article className="" key={comics._id}>
-            <h2>{comics.title}</h2>
-            <img
-              className="character-img"
-              src={`${comics.thumbnail.path}/standard_xlarge.${comics.thumbnail.extension}`}
-              alt="img-character"
-            />
-            <p>{comics.description}</p>
-          </article>
-        );
-      })}
+    <main className="comics-container">
+      <section className="comics-img">
+        <div className="comics-back">
+          {" "}
+          {comicsData.results.map((comics) => {
+            return (
+              <article className="comics-all" key={comics._id}>
+                <h2 className="comics-name">{comics.title}</h2>
+                <img
+                  className="comics-photo"
+                  src={`${comics.thumbnail.path}/standard_xlarge.${comics.thumbnail.extension}`}
+                  alt="img-comics"
+                />
+                <p className="comics-description">{comics.description}</p>
+              </article>
+            );
+          })}
+        </div>
+      </section>
     </main>
   );
 };

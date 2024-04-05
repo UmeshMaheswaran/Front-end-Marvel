@@ -204,6 +204,64 @@ body {
   margin-top: 20px;
 }
 
+/* COMICS CSS */
+
+.comics-container {
+  background-color: white;
+  width: 1685px;
+  height: 100%;
+}
+.comics-all {
+  /* border: solid #ec1d25 1px; */
+  margin-top: 50px;
+  width: 300px;
+  /* margin-top: 20px; */
+  margin-bottom: 30px;
+}
+
+.comics-img {
+  background-image: url("https://cdn.wallpapersafari.com/32/26/uzPZXi.jpg");
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  border: #202020 solid 1px;
+  height: 450px;
+  margin-top: 30px;
+}
+
+.comics-back {
+  width: 1685px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 410px;
+}
+
+.comics-photo {
+  height: 336px;
+  width: 226px;
+  border-radius: 2px;
+  cursor: pointer;
+
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.comics-description {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.comics-name {
+  font-weight: 800;
+  color: white;
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
 /* SPIDER MAN ANIMATION */
 
 * {
