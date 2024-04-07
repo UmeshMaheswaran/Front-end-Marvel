@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const Comics = () => {
   const [comicsData, setComicsData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-
+  const [search, setSearch] = useState("");
   useEffect(() => {
     const fetchComicsData = async () => {
       try {
@@ -23,8 +23,16 @@ const Comics = () => {
   ) : (
     <main className="comics-container">
       <section className="comics-img">
+        <input
+          className="searchbarre"
+          value={search}
+          type="text"
+          placeholder="Search..."
+          onChange={(event) => {
+            setSearch(event.target.value);
+          }}
+        />
         <div className="comics-back">
-          {" "}
           {comicsData.results.map((comics) => {
             return (
               <article className="comics-all" key={comics._id}>
@@ -34,7 +42,7 @@ const Comics = () => {
                   src={`${comics.thumbnail.path}/standard_xlarge.${comics.thumbnail.extension}`}
                   alt="img-comics"
                 />
-                <p className="comics-description">{comics.description}</p>
+                {/* <p className="comics-description">{comics.description}</p> */}
               </article>
             );
           })}

@@ -16,43 +16,37 @@ body {
   width: 100%;
   height: 100px;
 
-  /* background-color: black; */
+  background-color: black;
 }
 .header-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 0 auto;
+  height: 100%;
 }
 
 .logomarvel {
   margin-top: 38px;
   height: 56px;
   width: 130px;
+  margin-top: 20px;
 }
 
 .buttoncomics {
   animation: wiggle 2s linear infinite;
   margin-top: 38px;
-  height: 50px;
-  width: 100px;
   background-color: #ec1d25;
-  color: white;
+  border: solid 1px white;
   font-weight: 900;
-  border-radius: 10px;
   cursor: pointer;
   opacity: 0.8;
-  border: none;
-  /* position: absolute; */
+
   left: calc(50% - 3em);
   top: calc(50% - 2em);
-
+  margin-bottom: 20px;
   height: 4em;
   width: 7em;
-
-  /* background: #444; */
-  background: linear-gradient(top, #555, #333);
-  border: none;
 
   border-radius: 5px;
   color: #fff;
@@ -91,25 +85,24 @@ body {
 .buttoncharacter {
   animation: wiggle 2s linear infinite;
   margin-top: 38px;
-  height: 50px;
-  width: 100px;
+
   background-color: #ec1d25;
-  color: white;
+
   font-weight: 900;
-  border-radius: 10px;
+
   cursor: pointer;
   opacity: 0.8;
-  border: none;
-  /* position: absolute; */
+
+  margin-bottom: 20px;
+  border: solid 1px white;
+
   left: calc(50% - 3em);
   top: calc(50% - 2em);
 
   height: 4em;
   width: 7em;
 
-  /* background: #444; */
-  background: linear-gradient(top, #555, #333);
-  border: none;
+  border: solid 1px white;
 
   border-radius: 5px;
   color: #fff;
@@ -120,26 +113,22 @@ body {
 
 .buttonfavoris {
   animation: wiggle 2s linear infinite;
+  border: solid 1px white;
   margin-top: 38px;
-  height: 50px;
-  width: 100px;
+
   background-color: #ec1d25;
-  color: white;
+
   font-weight: 900;
   border-radius: 10px;
   cursor: pointer;
   opacity: 0.8;
-  border: none;
-  /* position: absolute; */
+  margin-bottom: 20px;
+
   left: calc(50% - 3em);
   top: calc(50% - 2em);
 
   height: 4em;
   width: 7em;
-
-  /* background: #444; */
-  background: linear-gradient(top, #555, #333);
-  border: none;
 
   border-radius: 5px;
   color: #fff;
@@ -154,28 +143,28 @@ body {
   background-color: white;
 }
 .character-all {
-  /* border: solid #ec1d25 1px; */
   margin-top: 50px;
   width: 300px;
-  /* margin-top: 20px; */
+
   margin-bottom: 50px;
 }
 
 .home-img {
-  background-image: url("https://c4.wallpaperflare.com/wallpaper/566/514/449/marvel-cinematic-universe-marvel-comics-iron-man-spider-man-wallpaper-preview.jpg");
+  background-image: url("https://wallpapers.com/images/hd/marvel-heroes-4jv7m7n3oap6thkm.webp");
   background-size: cover;
   background-position: center;
   object-fit: cover;
-  border: #555 solid 1px;
+  border: white solid 1px;
   height: 450px;
-  margin-top: 30px;
+
   width: 100%;
 }
 
 .color-back {
   /* height: 100%;
   width: 100%; */
-  margin-top: 410px;
+  margin-top: 300px;
+  gap: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -184,11 +173,16 @@ body {
 .character-img {
   height: 336px;
   width: 226px;
-  border-radius: 2px;
+  border-radius: 10px;
   cursor: pointer;
+  transition: transform 0.1s;
 
   object-fit: cover;
-  margin-bottom: 10px;
+}
+.character-img:hover {
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 .description {
@@ -207,26 +201,34 @@ body {
 /* COMICS CSS */
 
 .comics-container {
-  background-color: white;
-  width: 1685px;
   height: 100%;
 }
 .comics-all {
-  /* border: solid #ec1d25 1px; */
-  margin-top: 50px;
   width: 300px;
-  /* margin-top: 20px; */
-  margin-bottom: 30px;
+
+  margin-bottom: 50px;
+}
+.searchbarre {
+  margin-top: 100px;
+  border: solid 1px white;
+  height: 50px;
+  width: 500px;
+  border-radius: 10px;
+
+  text-align: center;
+  opacity: 0.9;
+  background-color: #dbdddfa9;
+  font-size: 16px;
+  color: black;
 }
 
 .comics-img {
-  background-image: url("https://cdn.wallpapersafari.com/32/26/uzPZXi.jpg");
+  background-image: url("https://wallpapers.com/images/hd/marvel-all-in-one-3twzbzkk15m1le1f.webp");
   background-size: cover;
-  background-position: center;
+
   object-fit: cover;
-  border: #202020 solid 1px;
+  border: white solid 1px;
   height: 450px;
-  margin-top: 30px;
 }
 
 .comics-back {
@@ -235,17 +237,24 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 410px;
+  margin-top: 350px;
 }
 
 .comics-photo {
   height: 336px;
   width: 226px;
-  border-radius: 2px;
-  cursor: pointer;
+  border-radius: 10px;
 
+  cursor: pointer;
+  transition: transform 0.1s;
   object-fit: cover;
-  margin-bottom: 10px;
+
+  gap: 20px;
+}
+.comics-photo:hover {
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 .comics-description {
