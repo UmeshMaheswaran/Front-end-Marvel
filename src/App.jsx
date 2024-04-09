@@ -6,20 +6,22 @@ import Comics from "./pages/Comics";
 import Favoris from "./pages/Favoris";
 import Header from "./components/Header";
 import ComicsById from "./pages/ComicsById";
-import Search from "./components/Search";
+
+import { useState } from "react";
 // import Header from "./components/Header";
 
 function App() {
+  const [search, setSearch] = useState("");
   return (
     <>
       <Router>
-        <Header />
-        <Search />
+        <Header search={search} setSearch={setSearch} />
+
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home search={search} />} />
           <Route path="/comics" element={<Comics />} />
           <Route path="/favoris" element={<Favoris />} />
-          <Route path="/comicsid" element={<ComicsById />} />
+          <Route path="/comics/:id" element={<ComicsById />} />
         </Routes>
       </Router>
     </>

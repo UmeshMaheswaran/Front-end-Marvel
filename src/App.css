@@ -163,11 +163,12 @@ body {
 .color-back {
   /* height: 100%;
   width: 100%; */
-  margin-top: 300px;
+  margin-top: 460px;
   gap: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
 .character-img {
@@ -176,6 +177,7 @@ body {
   border-radius: 10px;
   cursor: pointer;
   transition: transform 0.1s;
+  text-decoration: none;
 
   object-fit: cover;
 }
@@ -209,7 +211,7 @@ body {
   margin-bottom: 50px;
 }
 .searchbarre {
-  margin-top: 100px;
+  margin-top: 22px;
   border: solid 1px white;
   height: 50px;
   width: 500px;
@@ -237,7 +239,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 350px;
+  margin-top: 460px;
 }
 
 .comics-photo {

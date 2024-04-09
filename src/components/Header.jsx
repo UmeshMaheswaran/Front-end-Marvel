@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ search, setSearch }) => {
   return (
     <>
       <div className="container">
@@ -13,6 +13,17 @@ const Header = () => {
               alt="marvel"
             />
           </Link>
+          <div>
+            <input
+              className="searchbarre"
+              value={search}
+              type="text"
+              placeholder="Search..."
+              onChange={(event) => {
+                setSearch(event.target.value);
+              }}
+            />
+          </div>
 
           <div>
             <Link to="/comics">

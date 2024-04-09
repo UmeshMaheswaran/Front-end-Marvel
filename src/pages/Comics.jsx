@@ -1,15 +1,19 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const Comics = () => {
   const [comicsData, setComicsData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-  const [search, setSearch] = useState("");
+
+  const { id } = useParams();
+
   useEffect(() => {
     const fetchComicsData = async () => {
       try {
-        const { data } = await axios.get("http://localhost:3000/comics");
+        const { data } = await axios.get(
+          `http://localhost:3000/comics?id=${id}`
+        );
         setComicsData(data);
         setIsLoading(false);
       } catch (error) {
@@ -17,22 +21,13 @@ const Comics = () => {
       }
     };
     fetchComicsData();
-  }, []);
+  }, [id]);
 
   return isLoading ? (
-    <></>
+    <p>Loading...</p>
   ) : (
     <main className="comics-container">
       <section className="comics-img">
-        <input
-          className="searchbarre"
-          value={search}
-          type="text"
-          placeholder="Search..."
-          onChange={(event) => {
-            setSearch(event.target.value);
-          }}
-        />
         <div className="comics-back">
           {comicsData.results.map((comics) => {
             return (
