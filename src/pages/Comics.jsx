@@ -44,7 +44,7 @@ const Comics = () => {
                     src={`${comics.thumbnail.path}/standard_xlarge.${comics.thumbnail.extension}`}
                     alt="img-comics"
                   />
-                  {/* <p className="comics-description">{comics.description}</p> */}
+                  <p className="comics-description">{comics.description}</p>
                 </article>
               </Link>
             );

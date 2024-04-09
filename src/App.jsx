@@ -6,6 +6,7 @@ import Comics from "./pages/Comics";
 import Favoris from "./pages/Favoris";
 import Header from "./components/Header";
 import ComicsById from "./pages/ComicsById";
+import Search from "./components/Search";
 // import Header from "./components/Header";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <>
       <Router>
         <Header />
+        <Search />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/comics" element={<Comics />} />

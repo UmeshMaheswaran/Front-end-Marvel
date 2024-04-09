@@ -46,7 +46,7 @@ const Home = () => {
                   src={`${character.thumbnail.path}/standard_xlarge.${character.thumbnail.extension}`}
                   alt="img-character"
                 />
-                {/* <p className="description">{character.description}</p> */}
+                <p className="description">{character.description}</p>
               </div>
             );
           })}
