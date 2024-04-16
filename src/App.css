@@ -176,10 +176,15 @@ body {
   width: 226px;
   border-radius: 10px;
   cursor: pointer;
-  transition: transform 0.1s;
-  text-decoration: none;
 
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
   object-fit: cover;
+}
+
+.character-img:hover {
+  transform: scale(1.1); /* Zoom sur l'image au survol */
+  filter: brightness(1.2); /* Augmente la luminosité de l'image */
 }
 a {
   text-decoration: none;
