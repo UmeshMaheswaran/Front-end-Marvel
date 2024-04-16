@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Comics = ({ search }) => {
   const [comicsData, setComicsData] = useState({});
@@ -30,17 +30,17 @@ const Comics = ({ search }) => {
         <div className="comics-back">
           {comicsData.results.map((comics) => {
             return (
-              <Link key={comics._id} to={`/comics/${comics._id}`}>
-                <article className="comics-all" key={comics._id}>
-                  <h2 className="comics-name">{comics.title}</h2>
-                  <img
-                    className="comics-photo"
-                    src={`${comics.thumbnail.path}/standard_xlarge.${comics.thumbnail.extension}`}
-                    alt="img-comics"
-                  />
-                  {/* <p className="comics-description">{comics.description}</p> */}
-                </article>
-              </Link>
+              // <Link key={comics._id} to={`/comics/${comics._id}`}>
+              <article className="comics-all" key={comics._id}>
+                <h2 className="comics-name">{comics.title}</h2>
+                <img
+                  className="comics-photo"
+                  src={`${comics.thumbnail.path}/standard_xlarge.${comics.thumbnail.extension}`}
+                  alt="img-comics"
+                />
+                {/* <p className="comics-description">{comics.description}</p> */}
+              </article>
+              // </Link>
             );
           })}
         </div>

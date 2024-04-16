@@ -30,17 +30,17 @@ const Home = ({ search }) => {
         <div className="color-back">
           {charactersData.results.map((character) => {
             return (
-              // <Link key={character._id} to={`/comics/${character._id}`}>
-              <div className="character-all" key={character._id}>
-                <h2 className="name">{character.name}</h2>
-                <img
-                  className="character-img"
-                  src={`${character.thumbnail.path}/standard_xlarge.${character.thumbnail.extension}`}
-                  alt="img-character"
-                />
-                {/* <p className="description">{character.description}</p> */}
-              </div>
-              // </Link>
+              <Link key={character._id} to={`/comics/${character._id}`}>
+                <div className="character-all" key={character._id}>
+                  <h2 className="name">{character.name}</h2>
+                  <img
+                    className="character-img"
+                    src={`${character.thumbnail.path}/standard_xlarge.${character.thumbnail.extension}`}
+                    alt="img-character"
+                  />
+                  {/* <p className="description">{character.description}</p> */}
+                </div>
+              </Link>
             );
           })}
         </div>

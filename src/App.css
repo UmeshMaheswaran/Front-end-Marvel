@@ -284,6 +284,66 @@ a {
   color: white;
 }
 
+.comicsid-back {
+  margin-top: 460px;
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  align-items: center;
+}
+
+.comicsid-img {
+  background-image: url("https://images4.alphacoders.com/891/891167.jpg");
+  background-size: cover;
+
+  object-fit: cover;
+  border: white solid 1px;
+  height: 450px;
+}
+
+.comicsid-photo {
+  height: 336px;
+  width: 226px;
+  border-radius: 10px;
+
+  cursor: pointer;
+  transition: transform 0.1s;
+  object-fit: cover;
+
+  gap: 20px;
+}
+
+.comicsid-photo:hover {
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+.comicsid-description {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+}
+.comicsid-name {
+  font-weight: 800;
+  color: white;
+  font-size: 16px;
+
+  margin-bottom: 20px;
+  margin-top: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+}
+
 /* SPIDER MAN ANIMATION */
 
 * {
