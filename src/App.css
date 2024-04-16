@@ -181,6 +181,9 @@ body {
 
   object-fit: cover;
 }
+a {
+  text-decoration: none;
+}
 .character-img:hover {
   -ms-transform: scale(1.5);
   -webkit-transform: scale(1.5);
@@ -207,6 +210,8 @@ body {
 }
 .comics-all {
   width: 300px;
+  display: flex;
+  flex-wrap: wrap;
 
   margin-bottom: 50px;
 }
@@ -234,12 +239,12 @@ body {
 }
 
 .comics-back {
-  width: 1685px;
-
+  margin-top: 460px;
+  gap: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 460px;
+  align-items: center;
 }
 
 .comics-photo {
@@ -271,6 +276,12 @@ body {
   font-size: 16px;
   margin-bottom: 20px;
   margin-top: 20px;
+}
+
+/* COMICSBYID */
+
+.text {
+  color: white;
 }
 
 /* SPIDER MAN ANIMATION */

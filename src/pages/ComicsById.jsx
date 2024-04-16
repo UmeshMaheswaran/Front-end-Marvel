@@ -2,7 +2,6 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
-
 const ComicsById = () => {
   const [data, setData] = useState();
   const { characterId } = useParams();
@@ -22,7 +21,7 @@ const ComicsById = () => {
     fetchData();
   }, [characterId]);
   return isLoading ? (
-    <p>Loading...</p>
+    <p className="text"> LOAD</p>
   ) : (
     <main>
       {data.comics.map((comic) => {

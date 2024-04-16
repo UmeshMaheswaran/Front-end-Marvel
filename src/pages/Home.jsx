@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Home = ({ search }) => {
   const [charactersData, setCharactersData] = useState({});
@@ -38,7 +38,7 @@ const Home = ({ search }) => {
                   src={`${character.thumbnail.path}/standard_xlarge.${character.thumbnail.extension}`}
                   alt="img-character"
                 />
-                <p className="description">{character.description}</p>
+                {/* <p className="description">{character.description}</p> */}
               </div>
               // </Link>
             );
