@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 const ComicsById = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState({});
   const { characterId } = useParams();
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -24,15 +24,15 @@ const ComicsById = () => {
     <p className="text"> LOAD</p>
   ) : (
     <main>
-      {data.comics.map((comic) => {
+      {data.results.map((comics) => {
         return (
-          <main key={comic._id}>
-            <p>{comic.title}</p>
+          <main key={comics._id}>
+            <p>{comics.title}</p>
             <img
-              src={`${comic.thumbnail.path}/portrait_medium.${comic.thumbnail.extension}`}
+              src={`${comics.thumbnail.path}/portrait_medium.${comics.thumbnail.extension}`}
               alt="comics specific character"
             />
-            <p>{comic.description}</p>
+            <p>{comics.description}</p>
           </main>
         );
       })}
