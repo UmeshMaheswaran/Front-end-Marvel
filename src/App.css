@@ -184,11 +184,6 @@ body {
 a {
   text-decoration: none;
 }
-.character-img:hover {
-  -ms-transform: scale(1.5);
-  -webkit-transform: scale(1.5);
-  transform: scale(1.5);
-}
 
 .description {
   color: white;
@@ -258,11 +253,6 @@ a {
 
   gap: 20px;
 }
-.comics-photo:hover {
-  -ms-transform: scale(1.5);
-  -webkit-transform: scale(1.5);
-  transform: scale(1.5);
-}
 
 .comics-description {
   color: white;
@@ -313,12 +303,6 @@ a {
   object-fit: cover;
 
   gap: 20px;
-}
-
-.comicsid-photo:hover {
-  -ms-transform: scale(1.5);
-  -webkit-transform: scale(1.5);
-  transform: scale(1.5);
 }
 
 .comicsid-description {

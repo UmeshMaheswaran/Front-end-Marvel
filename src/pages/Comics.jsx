@@ -35,7 +35,7 @@ const Comics = ({ search }) => {
                 <h2 className="comics-name">{comics.title}</h2>
                 <img
                   className="comics-photo"
-                  src={`${comics.thumbnail.path}/standard_xlarge.${comics.thumbnail.extension}`}
+                  src={`${comics.thumbnail.path}/portrait_fantastic.${comics.thumbnail.extension}`}
                   alt="img-comics"
                 />
                 {/* <p className="comics-description">{comics.description}</p> */}

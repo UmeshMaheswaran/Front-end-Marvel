@@ -35,7 +35,7 @@ const Home = ({ search }) => {
                   <h2 className="name">{character.name}</h2>
                   <img
                     className="character-img"
-                    src={`${character.thumbnail.path}/standard_xlarge.${character.thumbnail.extension}`}
+                    src={`${character.thumbnail.path}/portrait_fantastic.${character.thumbnail.extension}`}
                     alt="img-character"
                   />
                   {/* <p className="description">{character.description}</p> */}
