@@ -34,7 +34,7 @@ body {
 }
 
 .buttoncomics {
-  animation: wiggle 2s linear infinite;
+  animation: wiggle 8s linear infinite;
   margin-top: 38px;
   background-color: #ec1d25;
   border: solid 1px white;
@@ -83,7 +83,7 @@ body {
 }
 
 .buttoncharacter {
-  animation: wiggle 2s linear infinite;
+  animation: wiggle 8s linear infinite;
   margin-top: 38px;
 
   background-color: #ec1d25;
@@ -112,7 +112,7 @@ body {
 }
 
 .buttonfavoris {
-  animation: wiggle 2s linear infinite;
+  animation: wiggle 8s linear infinite;
   border: solid 1px white;
   margin-top: 38px;
 
@@ -273,6 +273,7 @@ a {
   font-size: 16px;
   margin-bottom: 20px;
   margin-top: 20px;
+  text-align: center;
 }
 
 /* COMICSBYID */
@@ -333,6 +334,50 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  max-width: 200px;
+}
+
+/* CHARACTER BY ID */
+
+.characterid-back {
+  margin-top: 100px;
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.characterid-photo {
+  height: 336px;
+  width: 226px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  object-fit: cover;
+  gap: 20px;
+}
+.characterid-description {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  margin-top: 20px;
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
+  /* white-space: nowrap; */
+  max-width: 200px;
+}
+
+.characterid-name {
+  font-weight: 800;
+  color: white;
+  font-size: 16px;
+
+  margin-bottom: 20px;
+  margin-top: 20px;
+  overflow: hidden;
+  /* text-overflow: ellipsis; */
+  /* white-space: nowrap; */
   max-width: 200px;
 }
 

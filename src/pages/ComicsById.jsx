@@ -41,7 +41,7 @@ const ComicsById = () => {
                   src={`${comic.thumbnail.path}/portrait_fantastic.${comic.thumbnail.extension}`}
                   alt="comics specific character"
                 />
-                {/* <p className="comicsid-description">{comic.description}</p> */}
+                <p className="comicsid-description">{comic.description}</p>
               </article>
             );
           })}
