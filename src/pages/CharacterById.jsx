@@ -13,7 +13,7 @@ const CharacterById = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://localhost:3000/comic/${comicsId}`
+          `http://localhost:3000/comic/${comicsId}`
         );
         setData(response.data);
         console.log(response.data);
@@ -32,21 +32,15 @@ const CharacterById = () => {
     <main className="characterid-container">
       <section className="characterid-img">
         <div className="characterid-back">
-          {data.comic.map((character) => {
-            return (
-              <article className="characterid-all" key={character._id}>
-                <h4 className="characterid-name">{character.title}</h4>
-                <img
-                  className="characterid-photo"
-                  src={`${character.thumbnail.path}/portrait_fantastic.${character.thumbnail.extension}`}
-                  alt="character specific comic"
-                />
-                <p className="characterid-description">
-                  {character.description}
-                </p>
-              </article>
-            );
-          })}
+          <article className="characterid-all" key={data._id}>
+            <h4 className="characterid-name">{data.title}</h4>
+            <img
+              className="characterid-photo"
+              src={`${data.thumbnail.path}/portrait_fantastic.${data.thumbnail.extension}`}
+              alt="character specific comic"
+            />
+            <p className="characterid-description">{data.description}</p>
+          </article>
         </div>
       </section>
     </main>
