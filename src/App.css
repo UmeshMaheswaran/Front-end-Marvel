@@ -59,7 +59,7 @@ body {
 @keyframes wiggle {
   0%,
   7% {
-    transform: rotateZ(0);
+    transform: rotateZ(1s);
   }
   15% {
     transform: rotateZ(-15deg);
@@ -232,7 +232,6 @@ a {
 .comics-img {
   background-image: url("https://wallpapers.com/images/hd/marvel-all-in-one-3twzbzkk15m1le1f.webp");
   background-size: cover;
-
   object-fit: cover;
   border: white solid 1px;
   height: 450px;
@@ -251,12 +250,15 @@ a {
   height: 336px;
   width: 226px;
   border-radius: 10px;
-
+  transition: transform 0.3s ease-in-out;
   cursor: pointer;
-  transition: transform 0.1s;
   object-fit: cover;
-
   gap: 20px;
+}
+
+.comics-photo:hover {
+  transform: scale(1.1); /* Zoom sur l'image au survol */
+  filter: brightness(1.2); /* Augmente la luminosité de l'image */
 }
 
 .comics-description {
@@ -292,7 +294,6 @@ a {
 .comicsid-img {
   background-image: url("https://images4.alphacoders.com/891/891167.jpg");
   background-size: cover;
-
   object-fit: cover;
   border: white solid 1px;
   height: 450px;
@@ -302,12 +303,14 @@ a {
   height: 336px;
   width: 226px;
   border-radius: 10px;
-
   cursor: pointer;
-  transition: transform 0.1s;
+  transition: transform 0.3s ease-in-out;
   object-fit: cover;
-
   gap: 20px;
+}
+.comicsid-photo:hover {
+  transform: scale(1.1); /* Zoom sur l'image au survol */
+  filter: brightness(1.2); /* Augmente la luminosité de l'image */
 }
 
 .comicsid-description {
