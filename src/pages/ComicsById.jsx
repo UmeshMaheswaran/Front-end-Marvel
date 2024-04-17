@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const ComicsById = () => {
   const [data, setData] = useState({});
@@ -16,7 +17,7 @@ const ComicsById = () => {
           `http://localhost:3000/comics/${characterId}`
         );
         setData(response.data);
-        // console.log(response.data);
+        console.log(response.data);
 
         setIsLoading(false);
       } catch (error) {
@@ -31,18 +32,29 @@ const ComicsById = () => {
   ) : (
     <main className="comicsid-container">
       <section className="comicsid-img">
+        <div className="titleandimg ">
+          <h4 className="titlecomicsid">{data.name}</h4>
+          <img
+            className="photocomicsid"
+            src={`${data.thumbnail.path}/portrait_fantastic.${data.thumbnail.extension}`}
+            alt="paintcomics id "
+          />
+        </div>
+
         <div className="comicsid-back">
           {data.comics.map((comic) => {
             return (
-              <article className="comicsid-all" key={comic._id}>
-                <h3 className="comicsid-name">{comic.title}</h3>
-                <img
-                  className="comicsid-photo"
-                  src={`${comic.thumbnail.path}/portrait_fantastic.${comic.thumbnail.extension}`}
-                  alt="comics specific character"
-                />
-                <p className="comicsid-description">{comic.description}</p>
-              </article>
+              <Link key={comic._id} to={`/comic/${comic._id}`}>
+                <article className="comicsid-all" key={comic._id}>
+                  <h3 className="comicsid-name">{comic.title}</h3>
+                  <img
+                    className="comicsid-photo"
+                    src={`${comic.thumbnail.path}/portrait_fantastic.${comic.thumbnail.extension}`}
+                    alt="comics specific character"
+                  />
+                  <p className="comicsid-description">{comic.description}</p>
+                </article>
+              </Link>
             );
           })}
         </div>

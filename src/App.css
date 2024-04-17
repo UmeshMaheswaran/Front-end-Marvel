@@ -34,7 +34,7 @@ body {
 }
 
 .buttoncomics {
-  animation: wiggle 8s linear infinite;
+  transition: transform 0.3s ease-in-out;
   margin-top: 38px;
   background-color: #ec1d25;
   border: solid 1px white;
@@ -55,7 +55,7 @@ body {
   transform-origin: 50% 5em;
 }
 
-/* Keyframes */
+/* Keyframes
 @keyframes wiggle {
   0%,
   7% {
@@ -80,10 +80,10 @@ body {
   100% {
     transform: rotateZ(0);
   }
-}
+} */
 
 .buttoncharacter {
-  animation: wiggle 8s linear infinite;
+  transition: transform 0.3s ease-in-out;
   margin-top: 38px;
 
   background-color: #ec1d25;
@@ -112,7 +112,7 @@ body {
 }
 
 .buttonfavoris {
-  animation: wiggle 8s linear infinite;
+  transition: transform 0.3s ease-in-out;
   border: solid 1px white;
   margin-top: 38px;
 
@@ -136,6 +136,18 @@ body {
   font-size: 1em;
   transform-origin: 50% 5em;
 }
+.buttoncomics:hover {
+  transform: scale(1.1); /* Zoom sur l'image au survol */
+  filter: brightness(1.2); /* Augmente la luminosité de l'image */
+}
+.buttonfavoris:hover {
+  transform: scale(1.1); /* Zoom sur l'image au survol */
+  filter: brightness(1.2); /* Augmente la luminosité de l'image */
+}
+.buttoncharacter:hover {
+  transform: scale(1.1); /* Zoom sur l'image au survol */
+  filter: brightness(1.2); /* Augmente la luminosité de l'image */
+}
 
 /*Home*/
 
@@ -150,13 +162,11 @@ body {
 }
 
 .home-img {
-  background-image: url("https://wallpapers.com/images/hd/marvel-heroes-4jv7m7n3oap6thkm.webp");
+  background: url("https://images5.alphacoders.com/958/958100.jpg");
   background-size: cover;
-  background-position: center;
-  object-fit: cover;
+  background-position: 100%;
   border: white solid 1px;
   height: 450px;
-
   width: 100%;
 }
 
@@ -230,7 +240,7 @@ a {
 }
 
 .comics-img {
-  background-image: url("https://wallpapers.com/images/hd/marvel-all-in-one-3twzbzkk15m1le1f.webp");
+  background-image: url("https://images3.alphacoders.com/256/256657.jpg");
   background-size: cover;
   object-fit: cover;
   border: white solid 1px;
@@ -283,7 +293,7 @@ a {
 }
 
 .comicsid-back {
-  margin-top: 460px;
+  margin-top: 50px;
   gap: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -293,11 +303,31 @@ a {
 }
 
 .comicsid-img {
-  background-image: url("https://images4.alphacoders.com/891/891167.jpg");
+  background-image: url("https://images2.alphacoders.com/806/806554.jpg");
   background-size: cover;
+  background-position: 80%;
   object-fit: cover;
   border: white solid 1px;
   height: 450px;
+}
+
+.titleandimg {
+  margin-top: 500px;
+}
+.titlecomicsid {
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: #d42a2d;
+  font-weight: 800;
+}
+
+.photocomicsid {
+  height: 336px;
+  width: 226px;
+  border-radius: 10px;
+  object-fit: cover;
+  gap: 20px;
+  border: solid 2px white;
 }
 
 .comicsid-photo {
