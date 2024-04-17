@@ -186,7 +186,6 @@ body {
   width: 226px;
   border-radius: 10px;
   cursor: pointer;
-
   text-decoration: none;
   transition: transform 0.3s ease-in-out;
   object-fit: cover;
@@ -194,7 +193,7 @@ body {
 
 .character-img:hover {
   transform: scale(1.1); /* Zoom sur l'image au survol */
-  filter: brightness(1.2); /* Augmente la luminosité de l'image */
+  filter: brightness(1.1); /* Augmente la luminosité de l'image */
 }
 a {
   text-decoration: none;
@@ -218,20 +217,20 @@ a {
 .comics-container {
   height: 100%;
 }
+
 .comics-all {
   width: 300px;
   display: flex;
   flex-wrap: wrap;
-
   margin-bottom: 50px;
 }
+
 .searchbarre {
   margin-top: 22px;
   border: solid 1px white;
   height: 50px;
   width: 500px;
   border-radius: 10px;
-
   text-align: center;
   opacity: 0.9;
   background-color: #dbdddfa9;
@@ -245,6 +244,7 @@ a {
   object-fit: cover;
   border: white solid 1px;
   height: 450px;
+  filter: brightness(1.1);
 }
 
 .comics-back {

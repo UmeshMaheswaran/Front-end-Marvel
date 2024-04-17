@@ -10,7 +10,7 @@ const Comics = ({ search }) => {
     const fetchComicsData = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:3000/comics?=${search}`
+          `http://localhost:3000/comics?title=${search}`
         );
         setComicsData(data);
         setIsLoading(false);
