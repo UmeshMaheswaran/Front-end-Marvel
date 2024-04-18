@@ -182,13 +182,13 @@ body {
 }
 
 .character-img {
-  height: 336px;
+  height: 206px;
   width: 226px;
-  border-radius: 10px;
+  border: solid 2px darkred;
   cursor: pointer;
   text-decoration: none;
   transition: transform 0.3s ease-in-out;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .character-img:hover {
@@ -303,9 +303,9 @@ a {
 }
 
 .comicsid-img {
-  background-image: url("https://images2.alphacoders.com/806/806554.jpg");
+  background-image: url("https://images5.alphacoders.com/135/1352159.png");
   background-size: cover;
-  background-position: 80%;
+  background-position: 50%;
   object-fit: cover;
   border: white solid 1px;
   height: 450px;
