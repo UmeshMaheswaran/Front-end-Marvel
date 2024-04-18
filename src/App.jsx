@@ -1,5 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 
 import Home from "./pages/Home";
 import Comics from "./pages/Comics";
@@ -8,11 +9,9 @@ import Header from "./components/Header";
 import ComicsById from "./pages/ComicsById";
 import CharacterById from "./pages/CharacterById";
 
-import { useState } from "react";
-// import Header from "./components/Header";
-
 function App() {
   const [search, setSearch] = useState("");
+
   return (
     <>
       <Router>
