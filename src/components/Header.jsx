@@ -6,10 +6,9 @@ const Header = ({ search, setSearch }) => {
       <div className="container">
         <div className="header-container">
           <Link to="/">
-            {" "}
             <img
               className="logomarvel"
-              src="src/assets/img/marvel.svg"
+              src="src/assets/img/Marvel_Logo.svg.png"
               alt="marvel"
             />
           </Link>

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-// import Cookies from "js-cookie";
+import Cookies from "js-cookie";
 
 const Comics = ({ search }) => {
   const [comicsData, setComicsData] = useState({});
@@ -23,16 +23,6 @@ const Comics = ({ search }) => {
     console.log("test");
   }, [search]);
 
-  // const addToFavoris = (Comics) => {
-  //   const favoris = Cookies.get("favoris") || [];
-  //   if (!favoris.includes(Comics)) {
-  //     favoris.push(Comics);
-  //     Cookies.set("favoris", favoris);
-  //     console.log(favoris);
-  //   }
-  // };
-  // addToFavoris();
-
   return isLoading ? (
     <p>Loading...</p>
   ) : (
@@ -45,6 +35,24 @@ const Comics = ({ search }) => {
                 <Link key={comics._id} to={`/comic/${comics._id}`}>
                   <article className="comics-all" key={comics._id}>
                     <h2 className="comics-name">{comics.title}</h2>
+                    <button
+                      className="buttonfav"
+                      onClick={() => {
+                        const addToFavorites = Cookies.get(comics._id);
+                        // console.log(addToFavorites);
+
+                        if (!addToFavorites) {
+                          Cookies.set(
+                            "titlecomics",
+                            JSON.stringify([comics._id])
+                          );
+                        } else {
+                          console.log(addToFavorites);
+                        }
+                      }}
+                    >
+                      Favoris
+                    </button>
                     <img
                       className="comics-photo"
                       src={`${comics.thumbnail.path}/portrait_fantastic.${comics.thumbnail.extension}`}

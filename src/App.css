@@ -224,6 +224,23 @@ a {
   flex-wrap: wrap;
   margin-bottom: 50px;
 }
+.buttonfav {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border: solid 1px white;
+  margin-top: 38px;
+}
+
+.buttonfav:hover {
+  transform: scale(1.1); /* Zoom sur l'image au survol */
+  filter: brightness(1.2); /* Augmente la luminosité de l'image */
+}
 
 .searchbarre {
   margin-top: 22px;
@@ -303,9 +320,9 @@ a {
 }
 
 .comicsid-img {
-  background-image: url("https://images5.alphacoders.com/135/1352159.png");
+  background-image: url("https://images2.alphacoders.com/110/1107542.jpg");
   background-size: cover;
-  background-position: 50%;
+  /* background-position: 50%; */
   object-fit: cover;
   border: white solid 1px;
   height: 450px;
