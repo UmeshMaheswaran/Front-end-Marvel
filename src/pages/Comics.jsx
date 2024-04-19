@@ -2,10 +2,12 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Cookies from "js-cookie";
+// import { useNavigate } from "react-router-dom";
 
 const Comics = ({ search }) => {
   const [comicsData, setComicsData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  // const navigate = useNavigate();
 
   useEffect(() => {
     const fetchComicsData = async () => {
@@ -36,23 +38,40 @@ const Comics = ({ search }) => {
                   <article className="comics-all" key={comics._id}>
                     <h2 className="comics-name">{comics.title}</h2>
                     <button
-                      className="buttonfav"
-                      onClick={() => {
-                        const addToFavorites = Cookies.get(comics._id);
-                        // console.log(addToFavorites);
+                      className="buttonfav" // Définit la classe CSS du bouton pour le style
+                      onClick={(e) => {
+                        // Déclenche cette fonction quand le bouton est cliqué
+                        e.preventDefault(); // Empêche le comportement par défaut du clic (évite de naviguer via ton Link)
 
-                        if (!addToFavorites) {
+                        // Récupérer le cookie 'titlecomics'. Ce cookie contient les ID des comics favoris enregistrés
+                        const comicsFav = Cookies.get("titlecomics");
+
+                        if (!comicsFav) {
+                          // Si le cookie 'titlecomics' n'existe pas
+                          // Créer un nouveau cookie 'titlecomics' avec un tableau contenant l'identifiant du comic actuel
                           Cookies.set(
                             "titlecomics",
-                            JSON.stringify([comics._id])
+                            JSON.stringify([comics._id]) // Convertit le tableau en une chaîne JSON pour le stockage dans le cookie
                           );
                         } else {
-                          console.log(addToFavorites);
+                          // Si le cookie existe déjà
+                          // Convertir la chaîne JSON en un tableau d'identifiants de comics favoris
+                          const parsedComicsFav = JSON.parse(comicsFav);
+
+                          // Ajouter l'identifiant du comic actuel au tableau des favoris
+                          parsedComicsFav.push(comics._id);
+
+                          // Mettre à jour le cookie 'titlecomics' avec le nouveau tableau de favoris converti en chaîne JSON
+                          Cookies.set(
+                            "titlecomics",
+                            JSON.stringify(parsedComicsFav) // Convertit le tableau mis à jour en chaîne JSON
+                          );
                         }
                       }}
                     >
                       Favoris
                     </button>
+
                     <img
                       className="comics-photo"
                       src={`${comics.thumbnail.path}/portrait_fantastic.${comics.thumbnail.extension}`}
@@ -60,7 +79,7 @@ const Comics = ({ search }) => {
                     />
                     {/* <p className="comics-description">{comics.description}</p> */}
                   </article>
-                </Link>{" "}
+                </Link>
               </>
             );
           })}
