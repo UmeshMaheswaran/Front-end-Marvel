@@ -173,22 +173,29 @@ body {
 .color-back {
   /* height: 100%;
   width: 100%; */
+  /* border: solid 3px blue; */
+  border-radius: 20px;
+  margin-left: 18%;
+  background-color: white;
+  width: 65%;
   margin-top: 460px;
   gap: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  border: solid 1px grey;
 }
 
 .character-img {
-  height: 206px;
-  width: 226px;
-  border: solid 2px darkred;
+  height: 270px;
+  width: 270px;
+  border: solid 2px black;
   cursor: pointer;
   text-decoration: none;
   transition: transform 0.3s ease-in-out;
-  object-fit: fill;
+  object-fit: cover;
+  object-position: center center;
 }
 
 .character-img:hover {
@@ -200,13 +207,13 @@ a {
 }
 
 .description {
-  color: white;
+  color: black;
   text-align: center;
   font-size: 16px;
 }
 .name {
   font-weight: 800;
-  color: white;
+  color: black;
   font-size: 16px;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -216,6 +223,19 @@ a {
 
 .comics-container {
   height: 100%;
+}
+
+.comics-back {
+  border-radius: 20px;
+  margin-left: 18%;
+  background-color: white;
+  width: 65%;
+  margin-top: 460px;
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .comics-all {
@@ -264,23 +284,15 @@ a {
   filter: brightness(1.1);
 }
 
-.comics-back {
-  margin-top: 460px;
-  gap: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-
 .comics-photo {
-  height: 336px;
-  width: 226px;
-  border-radius: 10px;
-  transition: transform 0.3s ease-in-out;
+  height: 270px;
+  width: 270px;
+  border: solid 2px black;
   cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
   object-fit: cover;
-  gap: 20px;
+  object-position: center center;
 }
 
 .comics-photo:hover {
@@ -296,7 +308,7 @@ a {
 }
 .comics-name {
   font-weight: 800;
-  color: white;
+  color: black;
   font-size: 16px;
   margin-bottom: 20px;
   margin-top: 20px;
@@ -306,7 +318,7 @@ a {
 /* COMICSBYID */
 
 .text {
-  color: white;
+  color: black;
 }
 
 .comicsid-back {
@@ -350,6 +362,7 @@ a {
 .comicsid-photo {
   height: 336px;
   width: 226px;
+  border: solid 1px white;
   border-radius: 10px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
@@ -399,6 +412,7 @@ a {
   height: 336px;
   width: 226px;
   border-radius: 10px;
+  border: solid 2px white;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
   object-fit: cover;

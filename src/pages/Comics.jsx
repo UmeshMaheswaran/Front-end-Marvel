@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Cookies from "js-cookie";
+
 // import { useNavigate } from "react-router-dom";
 
 const Comics = ({ search }) => {
@@ -37,7 +37,7 @@ const Comics = ({ search }) => {
                 <Link key={comics._id} to={`/comic/${comics._id}`}>
                   <article className="comics-all" key={comics._id}>
                     <h2 className="comics-name">{comics.title}</h2>
-                    <button
+                    {/* <button
                       className="buttonfav" // Définit la classe CSS du bouton pour le style
                       onClick={(e) => {
                         // Déclenche cette fonction quand le bouton est cliqué
@@ -70,11 +70,11 @@ const Comics = ({ search }) => {
                       }}
                     >
                       Favoris
-                    </button>
+                    </button> */}
 
                     <img
                       className="comics-photo"
-                      src={`${comics.thumbnail.path}/portrait_fantastic.${comics.thumbnail.extension}`}
+                      src={`${comics.thumbnail.path}/portrait_incredible.${comics.thumbnail.extension}`}
                       alt="img-comics"
                     />
                     {/* <p className="comics-description">{comics.description}</p> */}

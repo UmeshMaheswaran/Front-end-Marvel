@@ -36,7 +36,7 @@ const CharacterById = () => {
             <h4 className="characterid-name">{data.title}</h4>
             <img
               className="characterid-photo"
-              src={`${data.thumbnail.path}/portrait_fantastic.${data.thumbnail.extension}`}
+              src={`${data.thumbnail.path}/portrait_incredible.${data.thumbnail.extension}`}
               alt="character specific comic"
             />
             <p className="characterid-description">{data.description}</p>
