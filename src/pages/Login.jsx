@@ -12,18 +12,15 @@ const Login = ({ handleToken }) => {
     event.preventDefault();
 
     try {
-      const response = await axios.post(
-        "https://lereacteur-marvel-api.herokuapp.com/user/login",
-        {
-          email: email,
-          password: password,
-        }
-      );
+      const response = await axios.post("http://localhost:3000/users/login", {
+        email: email,
+        password: password,
+      });
 
       handleToken(response.data.token);
       navigate("/");
     } catch (error) {
-      console.log(error.response.data);
+      console.log(error);
     }
   };
 
@@ -52,14 +49,17 @@ const Login = ({ handleToken }) => {
           />
         </div>
 
-        <div>
+        <div className="clic-login">
           <button className="login-button" type="submit">
             Se connecter
           </button>
         </div>
 
         <h3 className="Login-link">
-          <Link to={"/signup"}> Pas encore de compte ? Inscrit-toi !</Link>
+          <Link to={"/signup"}>
+            {" "}
+            <p className="log-link">Pas encore de compte ? Inscrit-toi !</p>
+          </Link>
         </h3>
       </form>
     </main>

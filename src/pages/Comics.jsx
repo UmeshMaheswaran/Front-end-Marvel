@@ -36,8 +36,9 @@ const Comics = ({ search }) => {
               <>
                 <Link key={comics._id} to={`/comic/${comics._id}`}>
                   <article className="comics-all" key={comics._id}>
-                    <h2 className="comics-name">{comics.title}</h2>
-                    {/* <button
+                    <div className="comics-card">
+                      <h2 className="comics-name">{comics.title}</h2>
+                      {/* <button
                       className="buttonfav" // Définit la classe CSS du bouton pour le style
                       onClick={(e) => {
                         // Déclenche cette fonction quand le bouton est cliqué
@@ -71,12 +72,13 @@ const Comics = ({ search }) => {
                     >
                       Favoris
                     </button> */}
+                      <img
+                        className="comics-photo"
+                        src={`${comics.thumbnail.path}/portrait_incredible.${comics.thumbnail.extension}`}
+                        alt="img-comics"
+                      />
+                    </div>
 
-                    <img
-                      className="comics-photo"
-                      src={`${comics.thumbnail.path}/portrait_incredible.${comics.thumbnail.extension}`}
-                      alt="img-comics"
-                    />
                     {/* <p className="comics-description">{comics.description}</p> */}
                   </article>
                 </Link>

@@ -23,27 +23,6 @@ const Header = ({ search, setSearch, token, handleToken }) => {
               }}
             />
           </div>
-          {token ? (
-            <button
-              className="disconnect"
-              onClick={() => {
-                handleToken(null);
-              }}
-            >
-              Disconnect
-            </button>
-          ) : (
-            <>
-              <div className="twobutton">
-                <Link to="/signup">
-                  <button className="Register">S'inscrire</button>
-                </Link>
-                <Link to="/login">
-                  <button className="login">Se connecter</button>
-                </Link>
-              </div>
-            </>
-          )}
 
           <div>
             <Link to="/comics">
@@ -69,6 +48,29 @@ const Header = ({ search, setSearch, token, handleToken }) => {
               </button>
             </Link>
           </div>
+          {token ? (
+            <Link to={"/"}>
+              <button
+                className="disconnect"
+                onClick={() => {
+                  handleToken(null);
+                }}
+              >
+                Disconnect
+              </button>
+            </Link>
+          ) : (
+            <>
+              <div className="twobutton">
+                <Link to="/signup">
+                  <button className="register">S'inscrire</button>
+                </Link>
+                <Link to="/login">
+                  <button className="connect">Se connecter</button>
+                </Link>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </>

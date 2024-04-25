@@ -33,12 +33,17 @@ const ComicsById = () => {
     <main className="comicsid-container">
       <section className="comicsid-img">
         <div className="titleandimg ">
-          <h4 className="titlecomicsid">{data.name}</h4>
-          <img
-            className="photocomicsid"
-            src={`${data.thumbnail.path}/portrait_fantastic.${data.thumbnail.extension}`}
-            alt="paintcomics id "
-          />
+          <div className="photocomicsid-card">
+            <Link to={"/"}>
+              <h4 className="titlecomicsid">{data.name}</h4>
+              <img
+                className="photocomicsid"
+                src={`${data.thumbnail.path}/portrait_fantastic.${data.thumbnail.extension}`}
+                alt="paintcomics id "
+              />
+            </Link>
+            <p className="comicsiddescription">{data.description}</p>
+          </div>
         </div>
 
         <div className="comicsid-back">
@@ -46,13 +51,16 @@ const ComicsById = () => {
             return (
               <Link key={comic._id} to={`/comic/${comic._id}`}>
                 <article className="comicsid-all" key={comic._id}>
-                  <h3 className="comicsid-name">{comic.title}</h3>
-                  <img
-                    className="comicsid-photo"
-                    src={`${comic.thumbnail.path}/portrait_incredible.${comic.thumbnail.extension}`}
-                    alt="comics specific character"
-                  />
-                  <p className="comicsid-description">{comic.description}</p>
+                  <div className="comicsid-card">
+                    <h3 className="comicsid-name">{comic.title}</h3>
+                    <img
+                      className="comicsid-photo"
+                      src={`${comic.thumbnail.path}/portrait_incredible.${comic.thumbnail.extension}`}
+                      alt="comics specific character"
+                    />
+                  </div>
+
+                  {/* <p className="comicsid-description">{comic.description}</p> */}
                 </article>
               </Link>
             );

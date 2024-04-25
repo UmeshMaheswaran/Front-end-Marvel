@@ -32,12 +32,15 @@ const Home = ({ search }) => {
             return (
               <Link key={character._id} to={`/comics/${character._id}`}>
                 <div className="character-all" key={character._id}>
-                  <h2 className="name">{character.name}</h2>
-                  <img
-                    className="character-img"
-                    src={`${character.thumbnail.path}/portrait_incredible.${character.thumbnail.extension}`}
-                    alt="img-character"
-                  />
+                  <div className="character-card">
+                    <h2 className="name">{character.name}</h2>
+                    <img
+                      className="character-img"
+                      src={`${character.thumbnail.path}/portrait_incredible.${character.thumbnail.extension}`}
+                      alt="img-character"
+                    />
+                  </div>
+
                   {/* <p className="description">{character.description}</p> */}
                 </div>
               </Link>
