@@ -13,16 +13,16 @@ import Signup from "./pages/Signup";
 import Login from "./pages/Login";
 
 function App() {
-  const [token, setToken] = useState(Cookies.get("marvel-token") || null);
+  const [userToken, setUserToken] = useState(Cookies.get("userToken") || null);
   const [search, setSearch] = useState("");
 
   const handleToken = (token) => {
     if (token) {
-      Cookies.set("marvel-token", token, { expires: 15 });
-      setToken(token);
+      Cookies.set("userToken", token, { expires: 7 });
+      setUserToken(token);
     } else {
-      Cookies.remove("marvel-token");
-      setToken(null);
+      Cookies.remove("userToken");
+      setUserToken(null);
     }
   };
 
@@ -30,7 +30,7 @@ function App() {
     <>
       <Router>
         <Header
-          token={token}
+          userToken={userToken}
           handleToken={handleToken}
           search={search}
           setSearch={setSearch}

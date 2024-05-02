@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
 const Login = ({ handleToken }) => {
+  const [errorMessage, setErrorMessage] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -12,6 +13,8 @@ const Login = ({ handleToken }) => {
     event.preventDefault();
 
     try {
+      setErrorMessage("Email ou mot de passe incorrect");
+
       const response = await axios.post("http://localhost:3000/users/login", {
         email: email,
         password: password,
@@ -53,6 +56,7 @@ const Login = ({ handleToken }) => {
           <button className="login-button" type="submit">
             Se connecter
           </button>
+          {errorMessage && <p style={{ color: "red" }}> {errorMessage}</p>}
         </div>
 
         <h3 className="Login-link">

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Header = ({ search, setSearch, token, handleToken }) => {
+const Header = ({ search, setSearch, userToken, handleToken }) => {
   return (
     <>
       <div className="container">
@@ -26,15 +26,13 @@ const Header = ({ search, setSearch, token, handleToken }) => {
 
           <div>
             <Link to="/comics">
-              {" "}
               <button className="buttoncomics" type="submit">
                 Comics
-              </button>{" "}
+              </button>
             </Link>
           </div>
           <div>
             <Link to="/">
-              {" "}
               <button className="buttoncharacter" type="submit">
                 Characters
               </button>
@@ -42,24 +40,12 @@ const Header = ({ search, setSearch, token, handleToken }) => {
           </div>
           <div>
             <Link to="/favoris">
-              {" "}
               <button className="buttonfavoris" type="submit">
                 Favoris
               </button>
             </Link>
           </div>
-          {token ? (
-            <Link to={"/"}>
-              <button
-                className="disconnect"
-                onClick={() => {
-                  handleToken(null);
-                }}
-              >
-                Disconnect
-              </button>
-            </Link>
-          ) : (
+          {!userToken ? (
             <>
               <div className="twobutton">
                 <Link to="/signup">
@@ -70,6 +56,17 @@ const Header = ({ search, setSearch, token, handleToken }) => {
                 </Link>
               </div>
             </>
+          ) : (
+            <Link to={"/"}>
+              <button
+                className="disconnect"
+                onClick={() => {
+                  handleToken(null);
+                }}
+              >
+                Disconnect
+              </button>
+            </Link>
           )}
         </div>
       </div>

@@ -13,7 +13,7 @@ const Signup = ({ handleToken }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      setErrorMessage("");
+      setErrorMessage("Ce mail existe déja");
 
       const response = await axios.post("http://localhost:3000/users/signup", {
         email: email,
