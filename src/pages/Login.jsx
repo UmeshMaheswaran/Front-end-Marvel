@@ -13,7 +13,7 @@ const Login = ({ handleToken }) => {
     event.preventDefault();
 
     try {
-      setErrorMessage("Email ou mot de passe incorrect");
+      setErrorMessage("Wrong Email or Password");
 
       const response = await axios.post("http://localhost:3000/users/login", {
         email: email,
@@ -31,11 +31,11 @@ const Login = ({ handleToken }) => {
     <main className="login-container">
       <form onSubmit={handleSubmit}>
         <div className="login-block">
-          <h2 className="login-title">Se connecter</h2>
+          <h2 className="login-title">Login</h2>
           <input
             value={email}
             type="text"
-            placeholder="Adresse Email"
+            placeholder="Email"
             name="email"
             onChange={(event) => {
               setEmail(event.target.value);
@@ -44,7 +44,7 @@ const Login = ({ handleToken }) => {
           <input
             value={password}
             type="password"
-            placeholder="Mot de passe"
+            placeholder="Password"
             name="password"
             onChange={(event) => {
               setPassword(event.target.value);
@@ -54,7 +54,7 @@ const Login = ({ handleToken }) => {
 
         <div className="clic-login">
           <button className="login-button" type="submit">
-            Se connecter
+            <p>Login</p>
           </button>
           {errorMessage && <p style={{ color: "red" }}> {errorMessage}</p>}
         </div>
@@ -62,7 +62,7 @@ const Login = ({ handleToken }) => {
         <h3 className="Login-link">
           <Link to={"/signup"}>
             {" "}
-            <p className="log-link">Pas encore de compte ? Inscrit-toi !</p>
+            <p className="log-link">No account yet ? Registration !</p>
           </Link>
         </h3>
       </form>

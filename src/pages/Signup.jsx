@@ -13,7 +13,7 @@ const Signup = ({ handleToken }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      setErrorMessage("Ce mail existe déja");
+      setErrorMessage("This e-mail already used");
 
       const response = await axios.post("http://localhost:3000/users/signup", {
         email: email,
@@ -40,13 +40,13 @@ const Signup = ({ handleToken }) => {
 
   return (
     <main className="signuppage">
-      <h1>Inscription</h1>
+      <h1>Registration</h1>
       <form className="signupform" onSubmit={handleSubmit}>
         <p className="ndc"></p>
         <input
           value={username}
           type="text"
-          placeholder="Nom d'utilisateur"
+          placeholder="Username"
           name="username"
           onChange={(event) => {
             setUsername(event.target.value);
@@ -66,7 +66,7 @@ const Signup = ({ handleToken }) => {
         <input
           value={password}
           type="password"
-          placeholder="Mot de passe"
+          placeholder="Password"
           name="password"
           onChange={(event) => {
             setPassword(event.target.value);
@@ -74,12 +74,12 @@ const Signup = ({ handleToken }) => {
         />
 
         <div className="clic">
-          <button type="submit">S'inscrire</button>
+          <button type="submit">Register</button>
           {errorMessage && <p style={{ color: "red" }}> {errorMessage}</p>}
         </div>
       </form>
       <Link to={"/login"}>
-        <p className="link-sentences"> Tu as déjà un compte ? Connecte-toi !</p>
+        <p className="link-sentences">Already have an account ? Log-in ! </p>
       </Link>
     </main>
   );

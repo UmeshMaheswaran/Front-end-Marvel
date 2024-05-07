@@ -23,7 +23,7 @@ const Home = ({ search }) => {
   }, [search]);
 
   return isLoading ? (
-    <>Loading...</>
+    <p className="loading-home"></p>
   ) : (
     <main className="charac-container">
       <section className="home-img">

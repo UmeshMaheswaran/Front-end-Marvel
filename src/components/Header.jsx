@@ -49,10 +49,10 @@ const Header = ({ search, setSearch, userToken, handleToken }) => {
             <>
               <div className="twobutton">
                 <Link to="/signup">
-                  <button className="register">S'inscrire</button>
+                  <button className="register">Register</button>
                 </Link>
                 <Link to="/login">
-                  <button className="connect">Se connecter</button>
+                  <button className="connect">Login</button>
                 </Link>
               </div>
             </>

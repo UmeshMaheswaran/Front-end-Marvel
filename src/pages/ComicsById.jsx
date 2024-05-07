@@ -28,7 +28,7 @@ const ComicsById = () => {
   }, [characterId]);
 
   return isLoading ? (
-    <p className="text"> LOAD</p>
+    <p className="loading-comicsid"></p>
   ) : (
     <main className="comicsid-container">
       <section className="comicsid-img">

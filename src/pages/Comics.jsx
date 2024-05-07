@@ -26,7 +26,7 @@ const Comics = ({ search }) => {
   }, [search]);
 
   return isLoading ? (
-    <p>Loading...</p>
+    <p className="loading-comics"></p>
   ) : (
     <main className="comics-container">
       <section className="comics-img">
